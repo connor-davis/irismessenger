@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Alert, Text, TextInput, TouchableOpacity, View } from 'react-native';
 import { useDispatch } from 'react-redux';
 import { generateKeyPair, hashText } from '../lib/encryption';
-import { setUserEmail, setUserID, setUserName } from '../lib/slices/user.slice';
+import { setUserEmail, setUserID, setUserName, setUserKeys } from '../lib/slices/user.slice';
 
 let JoinScreen = () => {
     let dispatch = useDispatch();
@@ -36,8 +36,10 @@ let JoinScreen = () => {
 
                     let genKeys = async () => {
                         let keys = await generateKeyPair();
+                        dispatch(setUserKeys(keys));
                     }
                     
+                    genKeys();
 
                     dispatch(setUserName(name));
                     dispatch(setUserEmail(email));
