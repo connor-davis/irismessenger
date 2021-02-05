@@ -9,15 +9,18 @@ import JoinScreen from './screens/join.screen';
 import FriendsScreen from './screens/friends.screen';
 import SettingsScreen from './screens/settings.screen';
 import { Provider, useSelector } from 'react-redux';
-import { store } from './lib/store';
+import { persistor, store } from './lib/store';
 import { selectUser } from './lib/slices/user.slice';
+import { PersistGate } from 'redux-persist/integration/react';
 
 const Stack = createStackNavigator();
 
 let App = () => {
   return (
     <Provider store={store}>
-      <Root />
+      <PersistGate loading={null} persistor={persistor}>
+        <Root />
+      </PersistGate>
     </Provider>
   );
 }
