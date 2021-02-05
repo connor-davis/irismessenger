@@ -7,7 +7,7 @@ let ChatsScreen = () => {
         <View>
             <Button title="Clear Store" onPress={() => {
                 Alert.alert("Cleared");
-                persistor.flush();
+                persistor.purge();
             }} />
             <FlatList />
         </View>
