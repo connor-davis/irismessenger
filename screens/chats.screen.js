@@ -9,7 +9,7 @@ let ChatsScreen = () => {
     let dispatch = useDispatch();
 
     useEffect(() => {
-        init(user.id);
+        init(user.id, dispatch);
     }, []);
 
     return (
