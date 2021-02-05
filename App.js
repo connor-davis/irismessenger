@@ -49,7 +49,7 @@ let Root = () => {
           )
         }}
         >
-          <Stack.Screen name="Chats" component={(props) => <ChatsScreen {...props} />} />
+          <Stack.Screen name="Chats" component={ChatsScreen} />
           <Stack.Screen name="Friends" component={FriendsScreen} />
           <Stack.Screen name="Settings" component={SettingsScreen} />
         </Stack.Navigator>) : (
