@@ -64,7 +64,7 @@ let JoinScreen = () => {
                                     marginVertical: 10,
                                 }}>
                                     <Text style={{
-                                        color: "rgb(232,232,232)"
+                                        color: "rgb(0,0,0)"
                                     }}>Let's Begin</Text>
                                 </View>
                             </TouchableOpacity>
