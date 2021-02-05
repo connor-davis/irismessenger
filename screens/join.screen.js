@@ -21,7 +21,9 @@ let JoinScreen = () => {
                 }}>
                     <TextInput placeholder="What is your email?" value={email} onChangeText={(text) => setEmail(text)} style={{ textAlign: "center", color: "rgb(132,132,132)" }} placeholderTextColor="rgb(132,132,132)"></TextInput>
                 </View>
-                <TouchableOpacity onPress={() => dispatch(setUserEmail(hashText(email)))}>
+                <TouchableOpacity onPress={() => {
+                    dispatch(setUserID(hashText(email)));
+                }}>
                     <View style={{
                         backgroundColor: "rgb(150,150,255)",
                         paddingHorizontal: 10,
