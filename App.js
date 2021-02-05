@@ -30,7 +30,7 @@ let Root = () => {
 
   return (
     <NavigationContainer>
-      {data.email ? (
+      {data.id ? (
         <Stack.Navigator screenOptions={{
           headerTitle: "Iris Messenger",
           headerStyle: {
