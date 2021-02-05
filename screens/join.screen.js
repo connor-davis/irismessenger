@@ -14,12 +14,12 @@ let JoinScreen = () => {
         <View style={{ flex: 1 }}>
             <View style={{ flex: 1, flexDirection: "column", justifyContent: "center", alignItems: "center" }}>
                 {areKeysGenerating ? (
-                    <View>
+                    <View style={{ flex: 1, flexDirection: "column", justifyContent: "center", alignItems: "center" }}>
                         <Text style={{ fontWeight: "bold" }}>Generating Security Keys</Text>
                         <Text style={{ fontWeight: "300" }}>Please be patient and do not exit the app...</Text>
                     </View>
                 ) : (
-                        <View>
+                        <View style={{ flex: 1, flexDirection: "column", justifyContent: "center", alignItems: "center" }}>
                             <View style={{
                                 width: "90%",
                                 backgroundColor: "rgb(232, 232, 232)",
