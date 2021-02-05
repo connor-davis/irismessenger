@@ -53,7 +53,13 @@ let Root = () => {
         <Stack.Screen name="Settings" component={SettingsScreen} />
       </Stack.Navigator>
     </NavigationContainer>
-  ) : (<Stack.Screen name="Join" component={JoinScreen} options={{ headerShown: false }} />);
+  ) : (
+    <NavigationContainer>
+      <Stack.Navigator>
+      <Stack.Screen name="Join" component={JoinScreen} options={{ headerShown: false }} />
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
 }
 
 export default App;
