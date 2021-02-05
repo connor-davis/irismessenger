@@ -1,5 +1,5 @@
 #!/bin/bash
-inotifywait -e close_write,moved_to,create -m ./ |
+inotifywait -e close_write,moved_to,create -m ./* |
 while read -r directory events filename; do
     git commit -am "auto commit" $1
     git push origin main

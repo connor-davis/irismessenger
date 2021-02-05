@@ -31,7 +31,7 @@ let JoinScreen = () => {
                     }}>
                         <Text style={{
                             color: "rgb(232,232,232)"
-                        }}>Let's Begin</Text>
+                        }}>Let's Begin!</Text>
                     </View>
                 </TouchableOpacity>
             </View>
