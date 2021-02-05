@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Text, TextInput, TouchableOpacity, View } from 'react-native';
+import { Alert, Text, TextInput, TouchableOpacity, View } from 'react-native';
 import { useDispatch } from 'react-redux';
 import { generateKeyPair, hashText } from '../lib/encryption';
 import { setUserEmail, setUserID, setUserName } from '../lib/slices/user.slice';
@@ -32,6 +32,13 @@ let JoinScreen = () => {
                     <TextInput placeholder="What is your email?" value={email} onChangeText={(text) => setEmail(text)} style={{ textAlign: "center", color: "rgb(132,132,132)" }} placeholderTextColor="rgb(132,132,132)"></TextInput>
                 </View>
                 <TouchableOpacity onPress={() => {
+                    Alert.alert("", "We are generating your security keys, please be patient while this happens and do not close the app.");
+
+                    let genKeys = async () => {
+                        let keys = await generateKeyPair();
+                    }
+                    
+
                     dispatch(setUserName(name));
                     dispatch(setUserEmail(email));
                     dispatch(setUserID(hashText(email)));
