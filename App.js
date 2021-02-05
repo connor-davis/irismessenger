@@ -30,33 +30,37 @@ let Root = () => {
 
   return (
     <NavigationContainer>
-      {data.id ? (
-        <Stack.Navigator screenOptions={{
-          headerTitle: "Iris Messenger",
-          headerStyle: {
-            backgroundColor: 'rgb(242, 242, 242)',
-            elevation: 0.0
-          },
-          headerRight: () => (
-            <View style={{ flex: 1, flexDirection: "row", alignItems: "center" }}>
-              <TouchableOpacity style={{ paddingRight: 15 }} onPress={() => Alert.alert("Friends")}>
-                <Text>Friends</Text>
-              </TouchableOpacity>
-              <TouchableOpacity style={{ paddingRight: 15 }} onPress={() => Alert.alert("Settings")}>
-                <Text>Settings</Text>
-              </TouchableOpacity>
-            </View>
-          )
-        }}
-        >
-          <Stack.Screen name="Chats" component={ChatsScreen} />
-          <Stack.Screen name="Friends" component={FriendsScreen} />
-          <Stack.Screen name="Settings" component={SettingsScreen} />
-        </Stack.Navigator>) : (
-          <Stack.Navigator>
-            <Stack.Screen name="Join" component={JoinScreen} options={{ headerShown: false }} />
-          </Stack.Navigator>
-        )}
+      <Stack.Navigator screenOptions={{
+        headerTitle: "Iris Messenger",
+        headerStyle: {
+          backgroundColor: 'rgb(242, 242, 242)',
+          elevation: 0.0
+        },
+        headerRight: () => (
+          <View style={{ flex: 1, flexDirection: "row", alignItems: "center" }}>
+            <TouchableOpacity style={{ paddingRight: 15 }} onPress={() => Alert.alert("Friends")}>
+              <Text>Friends</Text>
+            </TouchableOpacity>
+            <TouchableOpacity style={{ paddingRight: 15 }} onPress={() => Alert.alert("Settings")}>
+              <Text>Settings</Text>
+            </TouchableOpacity>
+          </View>
+        )
+      }}
+      >
+        {data.id ? (
+
+          <>
+            <Stack.Screen name="Chats" component={ChatsScreen} />
+            <Stack.Screen name="Friends" component={FriendsScreen} />
+            <Stack.Screen name="Settings" component={SettingsScreen} />
+          </>
+        ) : (
+            <>
+              <Stack.Screen name="Join" component={JoinScreen} options={{ headerShown: false }} />
+            </>
+          )}
+      </Stack.Navigator>
     </NavigationContainer>
   );
 }
