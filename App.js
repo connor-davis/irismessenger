@@ -28,7 +28,7 @@ let App = () => {
 let Root = () => {
   let data = useSelector(selectUser);
 
-  return (
+  return data.id ? (
     <NavigationContainer>
       <Stack.Navigator screenOptions={{
         headerTitle: "Iris Messenger",
@@ -48,20 +48,12 @@ let Root = () => {
         )
       }}
       >
-        {data !== {} ? (
-          <>
-            <Stack.Screen name="Chats" component={ChatsScreen} />
-            <Stack.Screen name="Friends" component={FriendsScreen} />
-            <Stack.Screen name="Settings" component={SettingsScreen} />
-          </>
-        ) : (
-            <>
-              <Stack.Screen name="Join" component={JoinScreen} options={{ headerShown: false }} />
-            </>
-          )}
+        <Stack.Screen name="Chats" component={ChatsScreen} />
+        <Stack.Screen name="Friends" component={FriendsScreen} />
+        <Stack.Screen name="Settings" component={SettingsScreen} />
       </Stack.Navigator>
     </NavigationContainer>
-  );
+  ) : (<Stack.Screen name="Join" component={JoinScreen} options={{ headerShown: false }} />);
 }
 
 export default App;
