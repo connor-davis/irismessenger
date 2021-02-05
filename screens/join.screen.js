@@ -17,6 +17,7 @@ let JoinScreen = () => {
                     backgroundColor: "rgb(232, 232, 232)",
                     paddingHorizontal: 20,
                     paddingVertical: 5,
+                    marginBottom: 5,
                     borderRadius: 20,
                 }}>
                     <TextInput placeholder="What would you be called?" value={name} onChangeText={(text) => setName(text)} style={{ textAlign: "center", color: "rgb(132,132,132)" }} placeholderTextColor="rgb(132,132,132)"></TextInput>
