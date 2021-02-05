@@ -34,12 +34,12 @@ let JoinScreen = () => {
                 <TouchableOpacity onPress={() => {
                     Alert.alert("", "We are generating your security keys, please be patient while this happens and do not close the app.");
 
-                    let genKeys = async () => {
+                    let generateKeys = async () => {
                         let keys = await generateKeyPair();
                         dispatch(setUserKeys(keys));
                     }
                     
-                    genKeys();
+                    generateKeys();
 
                     dispatch(setUserName(name));
                     dispatch(setUserEmail(email));
