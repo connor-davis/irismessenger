@@ -8,9 +8,6 @@ let ChatsScreen = () => {
     let dispatch = useDispatch();
     return (
         <View>
-            <Button title="Clear Store" onPress={() => {
-                dispatch(setUser({}));
-            }} />
         </View>
     );
 }
