@@ -11,15 +11,14 @@ let JoinScreen = () => {
     let [areKeysGenerating, setAreKeysGenerating] = useState(false);
 
     return (
-        <View style={{ flex: 1 }}>
-            <View style={{ flex: 1, flexDirection: "column", justifyContent: "center", alignItems: "center" }}>
+            <View style={{ flex: 1 }}>
                 {areKeysGenerating ? (
-                    <View style={{ flex: 1 }}>
+                    <View style={{ flex: 1, flexDirection: "column", justifyContent: "center", alignItems: "center" }}>
                         <Text style={{ fontWeight: "bold" }}>Generating Security Keys</Text>
                         <Text style={{ fontWeight: "300" }}>Please be patient and do not exit the app...</Text>
                     </View>
                 ) : (
-                        <View style={{ flex: 1 }}>
+                        <View style={{ flex: 1, flexDirection: "column", justifyContent: "center", alignItems: "center" }}>
                             <View style={{
                                 width: "90%",
                                 backgroundColor: "rgb(232, 232, 232)",
@@ -71,7 +70,6 @@ let JoinScreen = () => {
                         </View>
                     )}
             </View>
-        </View>
     );
 }
 
