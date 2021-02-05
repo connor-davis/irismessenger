@@ -5,7 +5,7 @@ let ChatsScreen = () => {
     return (
         <View>
             <ScrollView>
-                <FlatList></FlatList>
+                <FlatList children={() => ()}></FlatList>
             </ScrollView>
         </View>
     );
