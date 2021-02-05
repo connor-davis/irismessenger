@@ -40,8 +40,6 @@ let JoinScreen = () => {
                                 <TextInput placeholder="What is your email?" value={email} onChangeText={(text) => setEmail(text)} style={{ textAlign: "center", color: "rgb(132,132,132)" }} placeholderTextColor="rgb(132,132,132)"></TextInput>
                             </View>
                             <TouchableOpacity onPress={() => {
-                                Alert.alert("", "We are generating your security keys, please be patient while this happens and do not close the app.");
-
                                 let generateKeys = async () => {
                                     let keys = await generateKeyPair();
                                     setAreKeysGenerating(false);
