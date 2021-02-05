@@ -9,7 +9,7 @@ let ChatsScreen = () => {
                 Alert.alert("Cleared");
                 persistor.flush();
             }} />
-            <FlatList></FlatList>
+            <FlatList />
         </View>
     );
 }
