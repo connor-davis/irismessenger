@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
-import { View } from 'react-native';
+import { Button, View } from 'react-native';
 import { useDispatch, useSelector } from 'react-redux';
-import { init } from '../lib/protocol';
+import { addPeer, init } from '../lib/protocol';
 import { selectUser } from '../lib/slices/user.slice';
 
 let ChatsScreen = () => {
@@ -14,6 +14,9 @@ let ChatsScreen = () => {
 
     return (
         <View>
+            <Button title="Test Add Peer" onPress={() => {
+                addPeer({ id: user.id, info: { name: user.name, }, peerId: user.id });
+            }}/>
         </View>
     );
 }
