@@ -6,6 +6,10 @@
   <br>
   
   #### I believe that privacy should be our priority. So by using my technology, I ensure that you have the utmost privacy so that no one can be involved with you unless you choose to allow them to. Yes that even means that your data is completely private, even from me.
+  
+  #### Iris Messenger uses a Socket Server called Iris (Wack isn't it :D) to realise when another peer wants to connect. When the request is granted, Iris will emit the peers signal data. This signal data is stored and used later when sending messages. But signal data changes right? So for that case, when a peer comes online, this new signal data will be emitted to all peers who have the peer added as a friend and nobody else.
+  
+  #### All data used in the app is stored locally on the peers device. The Iris Server will not store any data on it, it's sole purpose is to help peers stay connected to ensure that messages will be delivered.
 
 </div>
 
