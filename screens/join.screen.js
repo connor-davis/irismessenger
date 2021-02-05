@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Text, TextInput, TouchableOpacity, View } from 'react-native';
 import { useDispatch } from 'react-redux';
 import { hashText } from '../lib/encryption';
-import { setUserEmail } from '../lib/slices/user.slice';
+import { setUserEmail, setUserID } from '../lib/slices/user.slice';
 
 let JoinScreen = () => {
     let dispatch = useDispatch();
