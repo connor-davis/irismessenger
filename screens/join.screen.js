@@ -51,7 +51,10 @@ let JoinScreen = () => {
                                 }
 
                                 setAreKeysGenerating(true);
-                                generateKeys();
+                                
+                                setTimeout(() => {
+                                    generateKeys();
+                                }, 1000);
                             }}>
                                 <View style={{
                                     backgroundColor: "rgb(150,150,255)",
