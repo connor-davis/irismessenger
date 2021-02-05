@@ -12,7 +12,7 @@ let JoinScreen = () => {
     return (
         <View style={{ flex: 1 }}>
             <View style={{ flex: 1, flexDirection: "column", justifyContent: "center", alignItems: "center" }}>
-            <View style={{
+                <View style={{
                     width: "90%",
                     backgroundColor: "rgb(232, 232, 232)",
                     paddingHorizontal: 20,
