@@ -48,7 +48,7 @@ let Root = () => {
         )
       }}
       >
-        {data.id ? (
+        {data.id !== null || data.id !== undefined ? (
           <>
             <Stack.Screen name="Chats" component={ChatsScreen} />
             <Stack.Screen name="Friends" component={FriendsScreen} />
