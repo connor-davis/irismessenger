@@ -31,7 +31,7 @@ let Root = () => {
   return data.id ? (
     <NavigationContainer>
       <Stack.Navigator screenOptions={{
-        headerTitle: "Welcome, " + data.name,
+        headerTitle: "Hello, " + data.name,
         headerStyle: {
           backgroundColor: 'rgb(242, 242, 242)',
           elevation: 0.0
