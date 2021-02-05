@@ -28,7 +28,7 @@ let JoinScreen = () => {
                                 marginBottom: 5,
                                 borderRadius: 20,
                             }}>
-                                <TextInput placeholder="What would you be called?" value={name} onChangeText={(text) => setName(text)} style={{ textAlign: "center", color: "rgb(132,132,132)" }} placeholderTextColor="rgb(132,132,132)"></TextInput>
+                                <TextInput placeholder="What would you be called?" value={name} onChangeText={(text) => setName(text)} style={{ textAlign: "center", color: "rgb(0,0,0)" }} placeholderTextColor="rgb(132,132,132)"></TextInput>
                             </View>
                             <View style={{
                                 width: "90%",
@@ -37,7 +37,7 @@ let JoinScreen = () => {
                                 paddingVertical: 5,
                                 borderRadius: 20,
                             }}>
-                                <TextInput placeholder="What is your email?" value={email} onChangeText={(text) => setEmail(text)} style={{ textAlign: "center", color: "rgb(132,132,132)" }} placeholderTextColor="rgb(132,132,132)"></TextInput>
+                                <TextInput placeholder="What is your email?" value={email} onChangeText={(text) => setEmail(text)} style={{ textAlign: "center", color: "rgb(0,0,0)" }} placeholderTextColor="rgb(132,132,132)"></TextInput>
                             </View>
                             <TouchableOpacity onPress={() => {
                                 let generateKeys = async () => {
@@ -64,7 +64,7 @@ let JoinScreen = () => {
                                     marginVertical: 10,
                                 }}>
                                     <Text style={{
-                                        color: "rgb(0,0,0)"
+                                        color: "rgb(232,232,232)"
                                     }}>Let's Begin</Text>
                                 </View>
                             </TouchableOpacity>
