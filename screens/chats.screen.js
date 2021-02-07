@@ -13,7 +13,7 @@ let ChatsScreen = () => {
     }, []);
 
     return (
-        <View>
+        <View style={{ flex: 1, alignItems: "center" }}>
             <TouchableOpacity onPress={() => {
                 dispatch(setUser({}));
             }}>
