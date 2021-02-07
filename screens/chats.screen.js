@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { Button, View } from 'react-native';
 import { useDispatch, useSelector } from 'react-redux';
-import { addPeer, init } from '../lib/protocol';
+import { initProtocol } from '../lib/protocol';
 import { selectUser } from '../lib/slices/user.slice';
 
 let ChatsScreen = () => {
@@ -9,7 +9,7 @@ let ChatsScreen = () => {
     let dispatch = useDispatch();
 
     useEffect(() => {
-        init(user.id, dispatch);
+        initProtocol(user.id, dispatch);
     }, []);
 
     return (
