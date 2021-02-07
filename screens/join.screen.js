@@ -56,7 +56,7 @@ let JoinScreen = () => {
                                 }, 1000);
                             }}>
                                 <View style={{
-                                    backgroundColor: "rgb(150,150,255)",
+                                    backgroundColor: "rgb(0,0,0)",
                                     paddingHorizontal: 10,
                                     paddingVertical: 10,
                                     borderRadius: 10,
