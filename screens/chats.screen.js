@@ -10,9 +10,6 @@ let ChatsScreen = () => {
 
     useEffect(() => {
         initProtocol(user.id, dispatch);
-
-        idChange({ friendId: "831bdf08417729d027e4714a0d0648cd" });
-        disconnectEvent({ friendId: "831bdf08417729d027e4714a0d0648cd" });
     }, []);
 
     return (
