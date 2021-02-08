@@ -59,6 +59,4 @@ buck-out/
 /ios/Pods/
 
 # Folders
-android/
-ios/
 .vscode/settings.json
