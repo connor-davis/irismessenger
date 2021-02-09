@@ -30,7 +30,7 @@ let ChatsScreen = () => {
             style={{
               color: 'rgb(232,232,232)',
             }}>
-            Send Test Beam
+            Send Message
           </Text>
         </View>
       </TouchableOpacity>
