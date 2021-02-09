@@ -1,12 +1,11 @@
 {
-  "//": 
-  ["Rename this sample file to package.json to use on your project."
-  , "The sample-package.json file will be overwritten in updates/reinstalls."
-  ],
-  "name": "sample-node-project",
+  "name": "iris-bridge",
   "version": "0.0.1",
-  "description": "node part of the project",
+  "description": "Mobile NodeJS bridge for the Iris Messenger",
   "main": "main.js",
-  "author": "janeasystems",
-  "license": ""
+  "author": "Connor Davis <19422@kloofhigh.co.za>",
+  "license": "GPL-3.0",
+  "dependencies": {
+    "hyperbeam": "^1.1.3"
+  }
 }
