@@ -33,7 +33,20 @@
     "react-redux": "^7.2.2",
     "redux-persist": "^6.0.0",
     "socket.io-client": "^3.1.1",
-    "stream-browserify": "^3.0.0"
+    "stream-browserify": "^3.0.0",
+    "browserify-zlib": "~0.1.4",
+    "dns.js": "^1.0.1",
+    "@tradle/react-native-http": "^2.0.0",
+    "https-browserify": "~0.0.0",
+    "react-native-os": "^1.0.1",
+    "punycode": "^1.2.4",
+    "react-native-level-fs": "^3.0.0",
+    "string_decoder": "~0.10.25",
+    "timers-browserify": "^1.0.1",
+    "url": "~0.10.1",
+    "react-native-tcp": "^3.2.1",
+    "vm-browserify": "0.0.4",
+    "readable-stream": "1.0.33"
   },
   "devDependencies": {
     "@babel/core": "^7.12.10",
