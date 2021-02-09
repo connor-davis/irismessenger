@@ -1,0 +1,11 @@
+{
+  "name": "iris-node-project",
+  "version": "0.0.1",
+  "description": "node part of the project",
+  "main": "main.js",
+  "author": "Connor Davis <19422@kloofhigh.co.za>",
+  "license": "",
+  "dependencies": {
+    "hyperbeam": "^1.1.3"
+  }
+}
