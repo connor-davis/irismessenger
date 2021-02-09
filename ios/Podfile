@@ -10,6 +10,8 @@ target 'irismessenger' do
 
   pod 'TcpSockets', :path => '../node_modules/react-native-tcp'
 
+  pod 'react-native-randombytes', :path => '../node_modules/react-native-randombytes'
+
   target 'irismessengerTests' do
     inherit! :complete
     # Pods for testing
