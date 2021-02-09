@@ -32,7 +32,8 @@
     "react-native-webrtc": "^1.87.3",
     "react-redux": "^7.2.2",
     "redux-persist": "^6.0.0",
-    "socket.io-client": "^3.1.1"
+    "socket.io-client": "^3.1.1",
+    "stream-browserify": "^3.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.12.10",
