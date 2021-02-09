@@ -16,12 +16,6 @@ import { PersistGate } from 'redux-persist/integration/react';
 const Stack = createStackNavigator();
 
 let App = () => {
-  let dispatch = useDispatch();
-
-  useEffect(() => {
-    init(dispatch);
-  }, []);
-
   return (
     <Provider store={store}>
       <PersistGate loading={null} persistor={persistor}>
@@ -33,6 +27,11 @@ let App = () => {
 
 let Root = () => {
   let data = useSelector(selectUser);
+  let dispatch = useDispatch();
+
+  useEffect(() => {
+    init(dispatch);
+  }, []);
 
   return data.id ? (
     <NavigationContainer>
