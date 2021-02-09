@@ -16,7 +16,7 @@ let ChatsScreen = () => {
     <View style={{flex: 1, alignItems: 'center'}}>
       <TouchableOpacity
         onPress={() => {
-          send();
+          send({ message: "Test message", user, connection: user.connection });
         }}>
         <View
           style={{
