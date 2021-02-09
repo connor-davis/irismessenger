@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import { Text, TouchableOpacity, View } from 'react-native';
 import { useDispatch, useSelector } from 'react-redux';
-import { initProtocol } from '../lib/protocol';
 import { selectUser, setUser } from '../lib/slices/user.slice';
 
 let ChatsScreen = () => {
