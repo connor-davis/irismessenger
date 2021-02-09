@@ -1,5 +1,5 @@
 import 'react-native-gesture-handler';
-import React from 'react';
+import React, { useEffect } from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { Alert, Text, View } from 'react-native';
@@ -8,7 +8,7 @@ import ChatsScreen from './screens/chats.screen';
 import JoinScreen from './screens/join.screen';
 import FriendsScreen from './screens/friends.screen';
 import SettingsScreen from './screens/settings.screen';
-import { Provider, useSelector } from 'react-redux';
+import { Provider, useDispatch, useSelector } from 'react-redux';
 import { persistor, store } from './lib/store';
 import { selectUser } from './lib/slices/user.slice';
 import { PersistGate } from 'redux-persist/integration/react';
@@ -16,6 +16,12 @@ import { PersistGate } from 'redux-persist/integration/react';
 const Stack = createStackNavigator();
 
 let App = () => {
+  let dispatch = useDispatch();
+
+  useEffect(() => {
+    init(dispatch);
+  }, []);
+
   return (
     <Provider store={store}>
       <PersistGate loading={null} persistor={persistor}>
