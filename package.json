@@ -17,6 +17,7 @@
     "@reduxjs/toolkit": "^1.5.0",
     "buffer": "^6.0.3",
     "hybrid-crypto-js": "^0.2.4",
+    "hyperbeam": "^1.1.3",
     "md5": "^2.3.0",
     "react": "16.13.1",
     "react-native": "0.61.5",
