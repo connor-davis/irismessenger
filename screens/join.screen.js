@@ -46,7 +46,7 @@ let JoinScreen = () => {
                                     dispatch(setUserKeys(keys));
                                     dispatch(setUserName(name));
                                     dispatch(setUserEmail(email));
-                                    dispatch(setUserID(hashText(email)));
+                                    dispatch(setUserID(email));
                                 }
 
                                 setAreKeysGenerating(true);
