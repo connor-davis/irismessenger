@@ -31,7 +31,7 @@ let Root = () => {
   let dispatch = useDispatch();
 
   useEffect(() => {
-    closeSocket();
+    // closeSocket();
     init(dispatch);
   }, []);
 
