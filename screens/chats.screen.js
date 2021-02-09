@@ -29,6 +29,22 @@ let ChatsScreen = () => {
                     }}>Clear Storage</Text>
                 </View>
             </TouchableOpacity>
+
+            <TouchableOpacity onPress={() => {
+                dispatch(setUser({}));
+            }}>
+                <View style={{
+                    backgroundColor: "rgb(0,0,0)",
+                    paddingHorizontal: 10,
+                    paddingVertical: 10,
+                    borderRadius: 10,
+                    marginVertical: 10,
+                }}>
+                    <Text style={{
+                        color: "rgb(232,232,232)"
+                    }}>Clear Storage</Text>
+                </View>
+            </TouchableOpacity>
         </View>
     );
 }
