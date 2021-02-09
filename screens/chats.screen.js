@@ -9,7 +9,7 @@ let ChatsScreen = () => {
     let dispatch = useDispatch();
 
     useEffect(() => {
-        initProtocol(user.id, dispatch);
+
     }, []);
 
     return (
