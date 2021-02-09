@@ -1,0 +1,11 @@
+{
+  "name": "irismessenger",
+  "version": "0.0.1",
+  "description": "node part of the project",
+  "main": "main.js",
+  "author": "janeasystems",
+  "license": "",
+  "dependencies": {
+    "hyperbeam": "^1.1.3"
+  }
+}
