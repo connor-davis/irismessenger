@@ -18,7 +18,6 @@
     "buffer": "^6.0.3",
     "hybrid-crypto-js": "^0.2.4",
     "md5": "^2.3.0",
-    "nodejs-mobile-react-native": "^0.6.2",
     "react": "16.13.1",
     "react-native": "0.61.5",
     "react-native-gesture-handler": "^1.9.0",
