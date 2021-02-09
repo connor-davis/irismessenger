@@ -12,6 +12,7 @@ import { Provider, useDispatch, useSelector } from 'react-redux';
 import { persistor, store } from './lib/store';
 import { selectUser } from './lib/slices/user.slice';
 import { PersistGate } from 'redux-persist/integration/react';
+import { init } from './lib/protocol';
 
 const Stack = createStackNavigator();
 
