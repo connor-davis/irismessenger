@@ -17,6 +17,16 @@ let ChatsScreen = () => {
 
   return (
     <View style={{flex: 1, alignItems: 'center'}}>
+      {user.connection.ip ? (
+        <View
+          style={{
+            display: 'flex',
+            flexDirection: 'row',
+            justifyContent: 'center',
+          }}>
+          <Text>{JSON.stringify(user.connection)}</Text>
+        </View>
+      ) : null}
       <View
         style={{
           width: '90%',
