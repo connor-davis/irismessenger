@@ -7,9 +7,7 @@
   
   #### I believe that privacy should be our priority. So by using my technology, I ensure that you have the utmost privacy so that no one can be involved with you unless you choose to allow them to. Yes that even means that your data is completely private, even from me.
   
-  #### Iris Messenger uses a Socket Server called Iris (Wack isn't it :D) to realise when another peer wants to connect. When the request is granted, Iris will emit the peers signal data. This signal data is stored and used later when sending messages. But signal data changes right? So for that case, when a peer comes online, this new signal data will be emitted to all peers who have the peer added as a friend and nobody else.
-  
-  #### All data used in the app is stored locally on the peers device. The Iris Server will not store any data on it, it's sole purpose is to help peers stay connected and to ensure that messages will be delivered.
+  #### Iris Messenger uses a Socket Server called Iris (Wack isn't it :D) to relay messages to friends. These messages are end to end encrypted and can only be read by the other user.
 
 </div>
 
@@ -30,8 +28,8 @@
 <br>
 
 <div style="display: flex; align-items: center">
-  <img src="https://img.shields.io/github/languages/top/connor-davis/iris-frontend?color=gold&logo=github&logoColor=gold&style=for-the-badge" alt="top-language" />
-  <img src="https://img.shields.io/github/repo-size/connor-davis/iris-frontend?color=gold&logo=github&logoColor=gold&style=for-the-badge" alt="repo-size" />
+  <img src="https://img.shields.io/github/languages/top/connor-davis/irismessenger?color=gold&logo=github&logoColor=gold&style=for-the-badge" alt="top-language" />
+  <img src="https://img.shields.io/github/repo-size/connor-davis/irismessenger?color=gold&logo=github&logoColor=gold&style=for-the-badge" alt="repo-size" />
 </div>
 
 <br>
