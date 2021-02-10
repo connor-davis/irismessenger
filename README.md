@@ -28,8 +28,8 @@
 <br>
 
 <div style="display: flex; align-items: center">
-  <img src="https://img.shields.io/github/languages/top/connor-davis/iris-frontend?color=gold&logo=github&logoColor=gold&style=for-the-badge" alt="top-language" />
-  <img src="https://img.shields.io/github/repo-size/connor-davis/iris-frontend?color=gold&logo=github&logoColor=gold&style=for-the-badge" alt="repo-size" />
+  <img src="https://img.shields.io/github/languages/top/connor-davis/irismessenger?color=gold&logo=github&logoColor=gold&style=for-the-badge" alt="top-language" />
+  <img src="https://img.shields.io/github/repo-size/connor-davis/irismessenger?color=gold&logo=github&logoColor=gold&style=for-the-badge" alt="repo-size" />
 </div>
 
 <br>
