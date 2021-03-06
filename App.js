@@ -1,18 +1,21 @@
 import 'react-native-gesture-handler';
-import React, { useEffect } from 'react';
-import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
+
 import { Alert, Text, View } from 'react-native';
-import { TouchableOpacity } from 'react-native-gesture-handler';
-import ChatsScreen from './screens/chats.screen';
-import JoinScreen from './screens/join.screen';
-import FriendsScreen from './screens/friends.screen';
-import SettingsScreen from './screens/settings.screen';
-import { Provider, useDispatch, useSelector } from 'react-redux';
+import { NavigationContainer, useNavigation } from '@react-navigation/native';
+import { Provider, useSelector } from 'react-redux';
+import React, { useEffect } from 'react';
 import { persistor, store } from './lib/store';
-import { selectUser } from './lib/slices/user.slice';
+
+import ChatsScreen from './screens/chats.screen';
+import FriendsScreen from './screens/friends.screen';
+import HeaderRightMain from './components/HeaderRightMain';
+import JoinScreen from './screens/join.screen';
 import { PersistGate } from 'redux-persist/integration/react';
-import { closeSocket, init } from './lib/protocol';
+import SettingsScreen from './screens/settings.screen';
+import { TouchableOpacity } from 'react-native-gesture-handler';
+import { createStackNavigator } from '@react-navigation/stack';
+import { init } from './lib/protocol';
+import { selectUser } from './lib/slices/user.slice';
 
 const Stack = createStackNavigator();
 
@@ -28,34 +31,26 @@ let App = () => {
 
 let Root = () => {
   let data = useSelector(selectUser);
-  let dispatch = useDispatch();
 
   useEffect(() => {
-    // closeSocket();
-    init(dispatch);
+    init();
   }, []);
 
   return data.id ? (
     <NavigationContainer>
       <Stack.Navigator screenOptions={{
-        headerTitle: "Welcome, " + data.name,
+        headerTitle: false,
         headerStyle: {
           backgroundColor: 'rgb(242, 242, 242)',
           elevation: 0.0
         },
-        headerRight: () => (
-          <View style={{ flex: 1, flexDirection: "row", alignItems: "center" }}>
-            <TouchableOpacity style={{ paddingRight: 15 }} onPress={() => Alert.alert("Friends")}>
-              <Text>Friends</Text>
-            </TouchableOpacity>
-            <TouchableOpacity style={{ paddingRight: 15 }} onPress={() => Alert.alert("Settings")}>
-              <Text>Settings</Text>
-            </TouchableOpacity>
-          </View>
-        )
+        headerTintColor: "#000000",
+        headerPressColorAndroid: "#cecece"
       }}
       >
-        <Stack.Screen name="Chats" component={ChatsScreen} />
+        <Stack.Screen name="Chats" component={ChatsScreen} options={{
+          headerRight: () => <HeaderRightMain />,
+        }} />
         <Stack.Screen name="Friends" component={FriendsScreen} />
         <Stack.Screen name="Settings" component={SettingsScreen} />
       </Stack.Navigator>
@@ -63,7 +58,7 @@ let Root = () => {
   ) : (
     <NavigationContainer>
       <Stack.Navigator>
-      <Stack.Screen name="Join" component={JoinScreen} options={{ headerShown: false }} />
+        <Stack.Screen name="Join" component={JoinScreen} options={{ headerShown: false }} />
       </Stack.Navigator>
     </NavigationContainer>
   );
